@@ -34,8 +34,8 @@ public class ChatActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
 
         mAdapter = new MsgAdapter();
-        mAdapter.addMessage(new Message(1,"rudi","ich","Hi"));
-
+        mAdapter.addMessage(new Message(R.raw.pfeifen,"rudi","ich","Hi"));
+        mAdapter.addMessage(new Message(R.raw.ding_dong,"rudi","ich","Bist du da?"));
         mRecyclerView.setAdapter(mAdapter);
     }
 
