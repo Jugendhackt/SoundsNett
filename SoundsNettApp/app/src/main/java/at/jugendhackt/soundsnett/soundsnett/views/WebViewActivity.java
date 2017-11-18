@@ -21,6 +21,8 @@ public class WebViewActivity extends AppCompatActivity {
 
 
         WebView wv = findViewById(R.id.webview);
+        //wv.loadUrl("file:///android_asset/index.html");
+        wv.loadUrl("https://www.google.com");
     }
 
 }
