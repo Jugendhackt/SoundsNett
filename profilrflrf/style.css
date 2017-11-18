@@ -1,0 +1,42 @@
+#screen{
+background:black;
+color:white;
+font-size:50;
+width:400px;
+height:700px;
+margin:auto;
+}
+
+#profilbild{
+width:100px;	
+border-radius: 100%;
+}
+
+#head{
+text-align:center;
+height:200px;
+border-bottom:2px solid darkgrey;
+background:lightgrey;
+}
+
+#sound{
+	border-bottom: 2px solid darkgrey;
+}
+
+#smile{
+	border-bottom: 2px solid darkgrey;
+}
+
+#weiteres{
+	border-bottom: 2px solid darkgrey;
+}
+
+#name{
+	background:white;
+    color:black;
+	font-size:30px;
+    font-family:sans-serif;
+	}
+
+
+
