@@ -1,5 +1,6 @@
 package at.jugendhackt.soundsnett.soundsnett;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import at.jugendhackt.soundsnett.soundsnett.model.Contact;
+import at.jugendhackt.soundsnett.soundsnett.views.ChatActivity;
 import at.jugendhackt.soundsnett.soundsnett.views.ContactAdapter;
+import at.jugendhackt.soundsnett.soundsnett.views.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
     ContactAdapter mAdapter;
@@ -56,7 +59,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Intent i = new Intent(getApplicationContext(), WebViewActivity.class);
+                getApplicationContext().startActivity(i);
+                return true;
+            }
+        });
+
         return true;
+
     }
 
     @Override
