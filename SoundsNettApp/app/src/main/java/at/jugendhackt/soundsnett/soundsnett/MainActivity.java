@@ -1,13 +1,11 @@
 package at.jugendhackt.soundsnett.soundsnett;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -46,10 +44,15 @@ public class MainActivity extends AppCompatActivity {
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                mAdapter.addContact(new Contact("Rudi", ""));
-                mAdapter.addContact(new Contact("Susi", ""));
-                mAdapter.addContact(new Contact("Susi", ""));
-
+                mAdapter.clearContacts();
+                mAdapter.addContact(new Contact("Yusuf", R.drawable.yusuf));
+                mAdapter.addContact(new Contact("Sarah", R.drawable.sarah));
+                mAdapter.addContact(new Contact("Leon", R.drawable.leon));
+                mAdapter.addContact(new Contact("Taleb", R.drawable.taleb));
+                mAdapter.addContact(new Contact("Chris", R.drawable.chris));
+                mAdapter.addContact(new Contact("Lisa", R.drawable.lisa));
+                MediaPlayer player = MediaPlayer.create(getApplicationContext(),R.raw.ding_dong);
+                player.start();
                 return true;
             }
         });

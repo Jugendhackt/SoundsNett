@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SoundsNett</string>
     <string name="contactsearch">suchen</string>
+    <string name="title_activity_chat">ChatActivity</string>
 </resources>

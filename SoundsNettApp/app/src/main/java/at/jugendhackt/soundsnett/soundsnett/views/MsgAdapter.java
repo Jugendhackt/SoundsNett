@@ -3,7 +3,7 @@ package at.jugendhackt.soundsnett.soundsnett.views;
 
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,12 +18,13 @@ import java.util.List;
 
 import at.jugendhackt.soundsnett.soundsnett.R;
 import at.jugendhackt.soundsnett.soundsnett.model.Contact;
+import at.jugendhackt.soundsnett.soundsnett.model.Message;
 
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
+public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
 
 
-    private List<Contact> mDataset;
+    private List<Message> mDataset;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -41,16 +42,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ContactAdapter() {
-        mDataset = new ArrayList<Contact>();
+    public MsgAdapter() {
+        mDataset = new ArrayList<Message>();
 
     }
-    public void addContact(Contact c) {
-        mDataset.add(c);
-        notifyDataSetChanged();
-    }
-    public void clearContacts() {
-        mDataset.clear();
+    public void addMessage(Message m) {
+        mDataset.add(m);
         notifyDataSetChanged();
     }
     // Create new views (invoked by the layout manager)
@@ -68,17 +65,16 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset.get(position).getName());
-        holder.mImageView.setImageResource(mDataset.get(position).getImgSrc());
+        holder.mTextView.setText(mDataset.get(position).getMessage());
+        holder.mImageView.setImageResource(R.drawable.ic_play);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(),ChatActivity.class);
-                i.putExtra("name",mDataset.get(position).getName());
-                view.getContext().startActivity(i);
+        MediaPlayer player = MediaPlayer.create(holder.itemView.getContext(),mDataset.get(position).getSound());
+        player.start();
             }
         });
 
