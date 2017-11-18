@@ -15,12 +15,13 @@ import java.util.List;
 
 import at.jugendhackt.soundsnett.soundsnett.R;
 import at.jugendhackt.soundsnett.soundsnett.model.Contact;
+import at.jugendhackt.soundsnett.soundsnett.model.Message;
 
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
+public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
 
 
-    private List<Contact> mDataset;
+    private List<Message> mDataset;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -38,16 +39,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ContactAdapter() {
-        mDataset = new ArrayList<Contact>();
+    public MsgAdapter() {
+        mDataset = new ArrayList<Message>();
 
     }
-    public void addContact(Contact c) {
-        mDataset.add(c);
-        notifyDataSetChanged();
-    }
-    public void clearContacts() {
-        mDataset.clear();
+    public void addMessage(Message m) {
+        mDataset.add(m);
         notifyDataSetChanged();
     }
     // Create new views (invoked by the layout manager)
@@ -68,8 +65,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset.get(position).getName());
-        holder.mImageView.setImageResource(R.drawable.rudi);
+        //holder.mTextView.setText(mDataset.get(position).getName());
+       // holder.mImageView.setImageResource(R.drawable.rudi);
 
     }
 
