@@ -65,8 +65,8 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        //holder.mTextView.setText(mDataset.get(position).getName());
-       // holder.mImageView.setImageResource(R.drawable.rudi);
+        holder.mTextView.setText(mDataset.get(position).getMessage());
+        holder.mImageView.setImageResource(R.drawable.ic_play);
 
     }
 

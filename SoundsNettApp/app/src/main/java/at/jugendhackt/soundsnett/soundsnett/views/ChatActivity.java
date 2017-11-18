@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import at.jugendhackt.soundsnett.soundsnett.R;
+import at.jugendhackt.soundsnett.soundsnett.model.Message;
 
 public class ChatActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
@@ -19,6 +20,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Bundle b = getIntent().getExtras();
+        toolbar.setTitle(b.getString("name"));
         setSupportActionBar(toolbar);
 
         mRecyclerView = findViewById(R.id.recyclerview);
@@ -31,6 +34,7 @@ public class ChatActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
 
         mAdapter = new MsgAdapter();
+        mAdapter.addMessage(new Message(1,"rudi","ich","Hi"));
 
         mRecyclerView.setAdapter(mAdapter);
     }
