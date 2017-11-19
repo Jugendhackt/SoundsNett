@@ -14,4 +14,5 @@
         <item>Indian</item>
         <item>Hunger</item>
     </string-array>
+    <string name="title_activity_web_view2">WebView2</string>
 </resources>
