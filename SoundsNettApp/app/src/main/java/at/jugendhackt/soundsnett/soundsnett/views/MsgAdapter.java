@@ -33,11 +33,12 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
         // each data item is just a string in this case
         public ImageView mImageView;
         public TextView mTextView;
-
+        public TextView mSender;
         public ViewHolder(LinearLayout l) {
             super(l);
-            mTextView = l.findViewById(R.id.contact_text);
-            mImageView = l.findViewById(R.id.contact_image);
+            mTextView = l.findViewById(R.id.text);
+            mImageView = l.findViewById(R.id.play);
+            mSender = l.findViewById(R.id.sender);
         }
     }
 
@@ -56,7 +57,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
                                          int viewType) {
         // create a new view
         LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.contact_cell, parent, false);
+                .inflate(R.layout.msg_cell, parent, false);
         // set the view's size, margins, paddings and layout parameters
 
         ViewHolder vh = new ViewHolder(v);
@@ -68,6 +69,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        holder.mSender.setText(mDataset.get(position).getSender());
         holder.mTextView.setText(mDataset.get(position).getMessage());
         holder.mImageView.setImageResource(R.drawable.ic_play);
         holder.itemView.setOnClickListener(new View.OnClickListener() {

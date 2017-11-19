@@ -20,4 +20,8 @@ public class Message {
         return msg;
     }
     public int getSound() { return soundId;}
+
+    public String getSender() {
+        return sender;
+    }
 }
