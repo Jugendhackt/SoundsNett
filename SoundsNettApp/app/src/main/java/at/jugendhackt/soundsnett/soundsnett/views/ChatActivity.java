@@ -54,6 +54,9 @@ public class ChatActivity extends AppCompatActivity {
                     case 4 :
                         sound = R.raw.weinen;
                         break;
+                    case 5 :
+                        sound = R.raw.cheering;
+                        break;
 
 
                 }
