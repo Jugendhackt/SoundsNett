@@ -16,4 +16,8 @@ public class Message {
         this.receiver = receiver;
         this.msg = msg;
     }
+    public String getMessage() {
+        return msg;
+    }
+    public int getSound() { return soundId;}
 }

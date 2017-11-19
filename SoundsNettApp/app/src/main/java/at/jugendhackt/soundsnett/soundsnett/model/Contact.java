@@ -6,9 +6,9 @@ package at.jugendhackt.soundsnett.soundsnett.model;
 
 public class Contact {
     String name;
-    String imgSrc;
+    int imgSrc;
 
-    public Contact(String name, String imgSrc) {
+    public Contact(String name, int imgSrc) {
         this.name = name;
         this.imgSrc = imgSrc;
     }
@@ -17,7 +17,7 @@ public class Contact {
         return name;
     }
 
-    public String getImgSrc() {
+    public int getImgSrc() {
         return imgSrc;
     }
 }
