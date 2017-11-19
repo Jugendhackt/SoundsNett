@@ -1,0 +1,28 @@
+#Anmeldung{
+	float:right;
+}
+
+#BUTTON{
+	background:orange;
+	color:black;
+	border-radius:30%;
+	font-size:20px;
+    margin-top:10px;
+	margin-right:10px;
+	}
+
+body{
+	font-family:sans-serif;
+}
+
+.all{
+	width:50%;
+    margin:auto;
+	background:rgba(255, 255, 255, 0.90000);
+	padding:20px;
+	}
+	
+#Link:hover{
+	color:orange;
+    transform:scale(2.0);
+	}
