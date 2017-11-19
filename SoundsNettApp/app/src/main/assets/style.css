@@ -1,0 +1,65 @@
+body{
+	background:lightgrey;
+}
+
+
+
+#screen{
+background:lightgrey;
+color:white;
+font-size:50;
+margin:auto;
+}
+
+#profilbild{
+width:100px;	
+border-radius: 100%;
+transition:0.5s;
+margin-top:50px
+}
+
+#profilbild:hover{
+transform:scale(2.0) rotate(360deg);
+}
+
+#head{
+text-align:center;
+height:200px;
+border-bottom:2px solid darkgrey;
+background:lightgrey;
+}
+
+#sound{
+	border-bottom: 2px solid darkgrey;
+    height:50px;
+	margin-top:10px;
+	padding-left:15px;
+	}
+
+#smile{
+	border-bottom: 2px solid darkgrey;
+    color:black;
+	font-family:sans-serif;
+	font-size:20px;
+	padding-left:15px;
+	margin-top:10px;
+	margin-bottom:10px;
+	}
+
+#weiteres{
+	border-bottom: 2px solid darkgrey;
+}
+
+#name{
+	background:white;
+    color:black;
+	font-size:30px;
+    font-family:sans-serif;
+	border-bottom:5px solid darkgrey;
+	padding-left:15px;
+	padding-top:5px;
+	padding-bottom:5px;
+	}
+
+
+

@@ -2,9 +2,12 @@
 package at.jugendhackt.soundsnett.soundsnett.views;
 
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -62,11 +65,18 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        //holder.mTextView.setText(mDataset.get(position).getName());
-       // holder.mImageView.setImageResource(R.drawable.rudi);
+        holder.mTextView.setText(mDataset.get(position).getMessage());
+        holder.mImageView.setImageResource(R.drawable.ic_play);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+        MediaPlayer player = MediaPlayer.create(holder.itemView.getContext(),mDataset.get(position).getSound());
+        player.start();
+            }
+        });
 
     }
 
