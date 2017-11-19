@@ -15,13 +15,16 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:id="@+id/play"/>
+        android:id="@+id/play"
+        android:tint="@android:color/holo_orange_dark"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi"
+        android:text="Hifrffffffffffffffffffffffffffffffff fff ff f "
         android:layout_gravity="center"
         android:layout_marginLeft="12dp"
-        android:id="@+id/text"/>
+        android:id="@+id/text"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
     </LinearLayout>
 </LinearLayout>

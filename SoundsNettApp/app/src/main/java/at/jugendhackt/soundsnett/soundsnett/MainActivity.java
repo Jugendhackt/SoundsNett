@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 Intent i = new Intent(getApplicationContext(), WebViewActivity.class);
+                i.putExtra("url","file:///android_asset/index.html");
                 getApplicationContext().startActivity(i);
                 return true;
             }

@@ -27,7 +27,9 @@ public class WebViewActivity extends AppCompatActivity {
         wv.getSettings().setJavaScriptEnabled(true);
         wv.setWebViewClient(new WebViewClient());
         wv.setWebChromeClient(new WebChromeClient());
-        wv.loadUrl("file:///android_asset/index.html");
+        String url = getIntent().getStringExtra("url");
+        wv.loadUrl(url);
+
         //wv.loadUrl("https://www.google.com");
     }
 

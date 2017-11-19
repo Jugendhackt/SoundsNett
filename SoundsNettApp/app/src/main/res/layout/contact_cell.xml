@@ -14,6 +14,8 @@
         android:text="Hi"
         android:layout_gravity="center"
         android:layout_marginLeft="12dp"
-        android:id="@+id/contact_text"/>
+        android:id="@+id/contact_text"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
