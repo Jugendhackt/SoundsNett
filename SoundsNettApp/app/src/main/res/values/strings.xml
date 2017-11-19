@@ -4,4 +4,11 @@
     <string name="title_activity_chat">ChatActivity</string>
     <string name="profile">Profil</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string-array name="sounds_array">
+        <item>Ding Dong</item>
+        <item>AO</item>
+        <item>Pfeifen</item>
+        <item>Flöte</item>
+        <item>Weinen</item>
+    </string-array>
 </resources>
