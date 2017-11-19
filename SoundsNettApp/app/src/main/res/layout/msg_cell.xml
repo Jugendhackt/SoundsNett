@@ -15,7 +15,8 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:id="@+id/play"/>
+        android:id="@+id/play"
+        android:tint="@android:color/holo_orange_dark"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

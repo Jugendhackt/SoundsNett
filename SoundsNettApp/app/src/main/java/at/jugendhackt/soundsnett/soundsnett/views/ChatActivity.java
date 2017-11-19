@@ -54,6 +54,15 @@ public class ChatActivity extends AppCompatActivity {
                     case 4 :
                         sound = R.raw.weinen;
                         break;
+                    case 5 :
+                        sound = R.raw.cheering;
+                        break;
+                    case 6 :
+                        sound = R.raw.indian;
+                        break;
+                    case 7 :
+                        sound = R.raw.knurren;
+                        break;
 
 
                 }
@@ -71,8 +80,10 @@ public class ChatActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
 
         mAdapter = new MsgAdapter();
-        mAdapter.addMessage(new Message(R.raw.pfeifen,"rudi","ich","Hi"));
-        mAdapter.addMessage(new Message(R.raw.ding_dong,"rudi","ich","Bist du da?"));
+        mAdapter.addMessage(new Message(R.raw.knurren,b.getString("name"),"ich","Hi wollen wir uns treffen?"));
+        mAdapter.addMessage(new Message(R.raw.indian,"ich","ich","?"));
+        mAdapter.addMessage(new Message(R.raw.cheering,b.getString("name"),"ich","!"));
+        mAdapter.addMessage(new Message(R.raw.ding_dong,"ich","ich","Ich bin da!"));
         mRecyclerView.setAdapter(mAdapter);
     }
 
